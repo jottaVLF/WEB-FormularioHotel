@@ -1,0 +1,31 @@
+<DOCTYPE html>
+	<head>
+		<title>Formulário Hotel</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<header id="principal">
+			<center><h1>Reserva de Quartos do Hotel PW</h1></center>
+		</header>
+		<form id="meuFormulario" onsubmit="exibirMensagem();">
+			<p><label for="nome">Nome Completo:</label>
+			<input type="text" id="nome" name="nome" placeholder="Nome e sobrenome" required></p>
+			<p><label for="email">Endereco de E-mail:</label>
+			<input type="email" id="email" name="email" required></p>
+			<p><label for="data">Data de Chegada:</label>
+			<input type="date" id="data" name="data" placeholder="dd/mm/aaaa" required></p>
+			<p><label for="noites">Número de noites (Cada noite custa R$99,00):</label>
+			<input type="number" id="noites" name="noites" min="1" max="30" required></p>
+			<p><label for="convidados">Número de Convidados (Cada convidado adicional custa R$10,00 por noite):</label>
+			<input type="number" id="convidados" name="convidados" min="1" max="50"></p>
+			<b><div id="resultado"></div></b>
+			<br><br>
+			<p><label for="promo">Código de Promoção:</label>
+			<input type="text" id="promo" name="promo" maxlength="6" pattern="[A-Za-z0-9]{6}" required></p>
+			<button type="submit">Fazer Reserva</button>
+		</form>
+	</body>
+</html>
